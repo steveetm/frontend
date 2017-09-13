@@ -43,6 +43,17 @@
      *          //
      *          "bootstrap": false   // OPTIONAL
      *      }
+     *
+     * To use ext-all-debug.js instead of explicitly loading all framework files at
+     * dev time, add the following entry to this js list :
+     *
+     *      {
+     *          "path": "${ext.dir}/build/ext-all-debug.js"
+     *      }
+     *
+     * Note: when using ext-all-debug.js, you also need to disable the loadOrder portion
+     * of the bootstrap manifest.  See the "bootstrap" property for details.
+     *
      */
     "js": [
         {
@@ -78,34 +89,93 @@
      */
     "css": [
         {
-            "path": "bootstrap.css",
-            "bootstrap": true
+            // this entry uses an ant variable that is the calculated
+            // value of the generated output css file for the app,
+            // defined in .sencha/app/defaults.properties
+            "path": "${build.out.css.path}",
+            "bundle": true
         }
     ],
 
     /**
-     * Additional resources used during theme slicing operations
+     * This option is used to configure the dynamic loader. At present these options
+     * are supported.
+     *
+     *      "loader": {
+     *          // This property controls how the loader manages caching for requests:
+     *          //
+     *          //   - true: allows requests to receive cached responses
+     *          //   - false: disable cached responses by adding a random "cache buster"
+     *          //   - other: a string (such as the build.timestamp shown here) to allow
+     *          //     requests to be cached for this build.
+     *          //
+     *          "cache": "${build.timestamp}",
+     *
+     *          // When "cache" is not true, this value is the request parameter used
+     *          // to control caching.
+     *          //
+     *          "cacheParam": "_dc"
+     *      },
+     *
      */
-    "slicer": {
-        "js": [
-            {
-                "path": "${app.dir}/sass/example/custom.js",
-                "isWidgetManifest": true
-            }
-        ]
-    },
+
+
+    /**
+     *  "compressor": {
+     *      "type": "closure",
+     *      "languageIn": "ECMASCRIPT5"
+     *  }
+     *
+     */
+    "compressor": null,
 
     /**
      * override objects for setting build environment specific
      * settings.
      */
     "production": {
+        "compressor": {
+            "type": "yui"
+        },
+        "cache": {
+            "enable": true
+        }
     },
 
     "testing": {
     },
 
     "development": {
+    },
+
+
+    /**
+     *  Controls the output structure of bootstrap artifacts.  May be specified by a string:
+     *
+     *      "bootstrap": "${app.dir}"
+     *
+     *  to adjust the base path for all bootstrap objects, or expanded into object form:
+     *
+     *      "bootstrap": {
+     *          "base": "${app.dir},
+     *          "manifest": "bootstrap.json",
+     *          "microloader": "bootstrap.js",
+     *          "css": "bootstrap.css"
+     *      }
+     *
+     *  To disable "loadOrder" metadata when using a framwork build file such as
+     *  ext-all-debug.js, use the expanded form of the manifest property:
+     *
+     *      "bootstrap": {
+     *          "manifest": {
+     *              "path": "bootstrap.json",
+     *              "exclude": "loadOrder"
+     *          }
+     *      }
+     *
+     */
+    "bootstrap":{
+        "base": "${app.dir}"
     },
 
     /**
@@ -147,15 +217,43 @@
      *          "slicer": {
      *              "path": "${app.output.resources}/images",
      *              "enable": false
+     *          },
+     *          // Setting the "enable" property of this object to a Truthy value will cause a Application Cache
+     *          // manifest file to be generated based on this files appCache object. This file will then be injected
+     *          // into the index.html file of the built application
+     *          "appCache":{
+     *              "enable": false"
      *          }
      *      }
-     *
      */
     "output": {
         "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+        "appCache": {
+            "enable": false
+        },
         "microloader": {
             "enable": true
         }
+    },
+
+    /**
+    * Controls for localStorage caching
+    *   "cache": {
+    *       // This property controls whether localStorage caching of this manifest file is on or off.
+    *       // if disabled no deltas will be generated during a build and full updates will be disabled
+    *       "enable": false,
+    *
+    *       // This property allows for global toggle of deltas.
+    *       // If set to a string the value will be used as the path to where deltas will be generated relative to you build.
+    *       // If set to a Truthy Value the default path ok "deltas" will be used
+    *       // If set to a Falsey value or if this property is not present deltas will be disabled and not generated.
+    *       //
+    *       "deltas": "deltas"
+    *   }
+    */
+    "cache": {
+        "enable": false,
+        "deltas": "deltas"
     },
 
     /**
@@ -209,18 +307,17 @@
                 "priority": 1000
             }
         ],
-        "microloader": "${app.config.dir}/microloader/testing.js",
+        "microloader": "${app.config.dir}/Microloader.js",
         "output": {
             "base": "${app.cordova.config.path}/www",
-            "manifest": {
-                "embed": true
-            },
-            "deltas": {
-                "enable": false
-            },
-            "cache": {
+            "page": "index.html",
+            "manifest": "${build.id}.json",
+            "appCache": {
                 "enable": false
             }
+        },
+        "cache": {
+            "enable": false
         }
     },
 
@@ -268,43 +365,69 @@
         },
         "js": [
             {
-                "path": "phonegap.js",
+                "path": "cordova.js",
                 "remote": true,
                 "priority": 1000
             }
         ],
-        "microloader": "${app.config.dir}/microloader/testing.js",
+        "microloader": "${app.config.dir}/Microloader.js",
         "output": {
             "base": "${app.phonegap.config.path}/www",
-            "manifest": {
-                "embed": true
-            },
-            "deltas": {
-                "enable": false
-            },
-            "cache": {
+            "page": "index.html",
+            "manifest": "${build.id}.json",
+            "appCache": {
                 "enable": false
             }
+        },
+        "cache": {
+            "enable": false
         }
     },
 
     /**
-     *  Controls the output structure of bootstrap artifacts.  May be specified by a string:
-     *
-     *  "bootstrap": "${app.dir}"
-     *
-     *  to adjust the base path for all bootstrap objects, or expanded into object form:
-     *
-     *  "bootstrap": {
-     *      "base": "${app.dir},
-     *      "manifest": "bootstrap.json",
-     *      "microloader": "bootstrap.js",
-     *      "css": "bootstrap.css"
-     *  }
-     *
+     * Additional resources used during theme slicing operations
+     */
+    "slicer": {
+        "js": [
+            {
+                "path": "${app.dir}/sass/example/custom.js",
+                "isWidgetManifest": true
+            }
+        ],
+        "output": {
+            "appCache": {
+                "enable": false
+            }
+        },
+        "cache": {
+            "enable": false
+        }
+    },
+
+    /**
      *
      */
-    "bootstrap":{
-        "base": "${app.dir}"
+    "fashion": {
+        "inliner": {
+            "enable": false
+        }
     }
+
+    /**
+     * The manager config object is used by the sencha app publish command to deploy this application to sencha web application manager
+     * "manager": {
+     *     // the space id for this application
+     *     "id": 12345,
+     *     // name of app in space deployments
+     *     "name": "${app.name}",
+     *     // space host
+     *     "host": "https://api.space.sencha.com/json.rpc",
+     *     // can be a zip file path, or a folder to be zipped and deployd to sencha space
+     *     "file": "${app.output.base}",
+     *     // These may be specified here, but are best specified in your user
+     *     // ~/.sencha/cmd/sencha.cfg file
+     *     "apiKey": "",
+     *     "secret": ""
+     * }
+     */
 }

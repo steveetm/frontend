@@ -6,7 +6,7 @@ Ext.define('TouchApp.view.DepartureList', {
     extend: 'Ext.dataview.List',
     requires: ['Ext.dataview.List'],
     xtype: 'DepartureList',
-
+    alias: 'DepartureList',
 
     initialize: function () {
         var me = this;
@@ -98,7 +98,6 @@ Ext.define('TouchApp.view.DepartureList', {
 
     },
 
-    config: {
         store: null, //Each departureList must have its own store instance
         itemTpl: new Ext.XTemplate('' +
         '<tpl if="this.getTime(time,dow)">' +
@@ -114,5 +113,4 @@ Ext.define('TouchApp.view.DepartureList', {
         grouped: true,
         disableSelection: true,
         mode: 'SIMPLE'
-    }
 });

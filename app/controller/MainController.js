@@ -17,13 +17,11 @@ Ext.define('TouchApp.controller.MainController', {
             },
             '*[itemId="providerSelect"]': {
                 selectionchange: 'onProvidersSelectionChange',
-                scope: 'this'
-
             },
-            '*[itemId="downloadData"]': {
+/*            '*[itemId="downloadData"]': {
                 tap: 'onTapDownloadData'
             }
-
+*/
         }
     },
     /**
@@ -38,11 +36,11 @@ Ext.define('TouchApp.controller.MainController', {
      */
     onProvidersSelectionChange: function (list, records) {
         var me = this;
-        idx = me.selectedProviders.indexOf(records[0].data.idProvider);
+        idx = me.selectedProviders.indexOf(Number(records[0].data.idProvider));
         if (idx > -1) {
             me.selectedProviders.splice(idx, 1);
         } else {
-            me.selectedProviders.push(records[0].data.idProvider);
+            me.selectedProviders.push(Number(records[0].data.idProvider));
         }
 
 

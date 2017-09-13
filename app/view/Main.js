@@ -21,8 +21,7 @@ Ext.define('TouchApp.view.Main', {
              * We have to "disable" the last tab, as it only servers as a download button. So, if the clicked tab is the last, prevent the setActiveItem to finish.
              * @event
              */
-            activeitemchange: {
-                order: 'before',
+            beforeactiveitemchange: {
                 fn: function (tabpanel, curIdx, oldIdx) {
                     console.log('tabpanelchange');
                     if (curIdx.config.itemId=='downloadData') {

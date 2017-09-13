@@ -146,11 +146,11 @@ Ext.application({
         // Initialize the main view
 
         Ext.onReady(function () {
-            Ext.Loader.loadScriptFile(
-                    'http://steveetm.hu/backend/ext-direct/getConfig',
-                    Ext.bind(me.onDirectApiLoaded, me),
-                    Ext.bind(me.onDirectApiFailed, me)
-                    );
+            Ext.Loader.loadScript(
+                    {url:'http://steveetm.hu/backend/ext-direct/getConfig',
+                    onLoad:Ext.bind(me.onDirectApiLoaded, me),
+                    onError:Ext.bind(me.onDirectApiFailed, me)
+                    });
         });
     },
     onUpdated: function () {

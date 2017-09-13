@@ -17,7 +17,6 @@ Ext.define('TouchApp.view.Settings', {
 
         items: [
             {
-                name: 'name',
                 xtype: 'list',
                 flex: 1,
                 mode: 'MULTI',
@@ -32,13 +31,6 @@ Ext.define('TouchApp.view.Settings', {
                     }
                 },
                 store: Ext.create('TouchApp.store.Providers'),
-                config: {
-
-                    itemId: 'Providers',
-                    itemTpl: '{name}'
-
-                },
-
                 itemTpl: '{name}'
 
             }
