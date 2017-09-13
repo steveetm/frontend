@@ -110,7 +110,6 @@
  *
  * For details see the documentation for {@link Ext.data.schema.Namer Namer}.
  */
-debugger;
 Ext.define('Ext.data.schema.Schema', {
     mixins: [
         'Ext.mixin.Factoryable'

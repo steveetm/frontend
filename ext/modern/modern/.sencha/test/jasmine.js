@@ -747,7 +747,6 @@ jasmine.initDebug = function() {
 
 jasmine.generateDebuggableBlock = function(fn) {
     return function() {
-        debugger;
         /* Step into the function below */
         fn.apply(this, arguments);
     };

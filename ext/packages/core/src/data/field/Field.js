@@ -246,7 +246,6 @@
  *          ]
  *      });
  */
-debugger;
 Ext.define('Ext.data.field.Field', {
     mixins: [
         'Ext.mixin.Factoryable'

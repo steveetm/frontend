@@ -6,7 +6,6 @@
  * Access the global instance stored in {@link Ext.browser} instead.
  * @private
  */
-debugger;
 (Ext.env || (Ext.env = {})).Browser = function (userAgent, publish) {
 // @define Ext.env.Browser
 // @define Ext.browser

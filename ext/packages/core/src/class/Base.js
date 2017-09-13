@@ -7,7 +7,6 @@
  * Ext.Base is the building block of all Ext classes. All classes in Ext inherit from Ext.Base.
  * All prototype and static members of this class are inherited by all other classes.
  */
-debugger;
 console.log('Should not SEE this');
 Ext.Base = (function(flexSetter) {
 // @define Ext.Base

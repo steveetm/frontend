@@ -20,7 +20,6 @@
  * Ext.Class is the factory and **not** the superclass of everything. For the base class that **all**
  * classes inherit from, see {@link Ext.Base}.
  */
-debugger;
 (function() {
 // @tag class
 // @define Ext.Class

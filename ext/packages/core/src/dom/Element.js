@@ -125,7 +125,6 @@
  *         opt.anim.stop();
  *     }
  */
- debugger;
 Ext.define('Ext.dom.Element', function(Element) {
     var WIN = window,
         DOC = document,
