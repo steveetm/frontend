@@ -5,11 +5,8 @@ Ext.define('TouchApp.model.Departure', {
     },
     config: {
         proxy: {
-            type: 'direct',
-            api: {
-                read: 'Controller_StationDepartures.getDepartures'
-
-            }
+            type: 'ajax',
+            url: 'http://10.10.0.251:28888/departures.json',
         },
 
         fields: [

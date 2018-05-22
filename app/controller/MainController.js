@@ -18,10 +18,10 @@ Ext.define('TouchApp.controller.MainController', {
             '*[itemId="providerSelect"]': {
                 selectionchange: 'onProvidersSelectionChange',
             },
-/*            '*[itemId="downloadData"]': {
-                tap: 'onTapDownloadData'
-            }
-*/
+            /*            '*[itemId="downloadData"]': {
+                            tap: 'onTapDownloadData'
+                        }
+            */
         }
     },
     /**
@@ -45,11 +45,9 @@ Ext.define('TouchApp.controller.MainController', {
 
 
         var departureLists = Ext.ComponentQuery.query('DepartureList');
-        if (2 > -1) {
-            departureLists.forEach(function (departureList) {
-                Ext.bind(departureList.setupFilters, departureList)();
-            });
-        }
+        departureLists.forEach(function (departureList) {
+            Ext.bind(departureList.setupFilters, departureList)();
+        });
     },
     onStationSelectInitialize: function (select) {
         console.log('select initialized');
@@ -61,8 +59,9 @@ Ext.define('TouchApp.controller.MainController', {
         select.getStore().loadData(Stations);
 
     },
-    onStationSelectChange: function (select, newValue) {
+    onStationSelectChange: function (select, newModel) {
         console.log('cahnge happend');
+        const newValue = newModel.get('idStation');
         var departureLists = Ext.ComponentQuery.query('DepartureList');
         if (newValue > -1) {
             departureLists.forEach(function (departureList) {
@@ -83,7 +82,7 @@ Ext.define('TouchApp.controller.MainController', {
     onCarouselActiveItemChange: function (carousel, value, oldValue, eOpts) {
         var me = this;
         var postfix = '';
-        var msg= value.title;
+        var msg = value.title;
         if (carousel.getActiveIndex() == 0) {
             var date = new Date()
             postfix = ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2)
@@ -99,13 +98,13 @@ Ext.define('TouchApp.controller.MainController', {
         var me = this;
         me.selectedProviders = [];
         me.setTime();
-        setInterval(function() {
-            Ext.bind(me.setTime,me)();
-        },1000*60);
+        setInterval(function () {
+            Ext.bind(me.setTime, me)();
+        }, 1000 * 60);
         me.callParent(arguments);
 
     },
-    setTime: function() {
+    setTime: function () {
         var me = this;
         var date = new Date()
         me.currentTime = ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2);

@@ -1,0 +1,804 @@
+{
+  "departures": [
+    {
+      "idStationDepartures": 0,
+      "time": "20:42",
+      "dow": 3,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 1,
+      "time": "01:48",
+      "dow": 1,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 2,
+      "time": "22:53",
+      "dow": 0,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 3,
+      "time": "08:25",
+      "dow": 3,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 4,
+      "time": "00:55",
+      "dow": 7,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 5,
+      "time": "19:33",
+      "dow": 5,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 6,
+      "time": "01:06",
+      "dow": 1,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 7,
+      "time": "05:08",
+      "dow": 7,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 8,
+      "time": "15:05",
+      "dow": 4,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 9,
+      "time": "10:03",
+      "dow": 7,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 10,
+      "time": "07:10",
+      "dow": 6,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 11,
+      "time": "21:09",
+      "dow": 1,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 12,
+      "time": "19:51",
+      "dow": 1,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 13,
+      "time": "12:31",
+      "dow": 1,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 14,
+      "time": "08:20",
+      "dow": 6,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 15,
+      "time": "22:24",
+      "dow": 3,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 16,
+      "time": "21:24",
+      "dow": 3,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 17,
+      "time": "07:05",
+      "dow": 6,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 18,
+      "time": "16:00",
+      "dow": 0,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 19,
+      "time": "16:26",
+      "dow": 7,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 20,
+      "time": "23:33",
+      "dow": 4,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 21,
+      "time": "10:03",
+      "dow": 7,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 22,
+      "time": "04:47",
+      "dow": 5,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 23,
+      "time": "00:27",
+      "dow": 2,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 24,
+      "time": "20:08",
+      "dow": 1,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 25,
+      "time": "04:15",
+      "dow": 6,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 26,
+      "time": "11:42",
+      "dow": 7,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 27,
+      "time": "04:10",
+      "dow": 5,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 28,
+      "time": "07:12",
+      "dow": 4,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 29,
+      "time": "22:48",
+      "dow": 7,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 30,
+      "time": "16:24",
+      "dow": 6,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 31,
+      "time": "07:08",
+      "dow": 7,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 32,
+      "time": "18:24",
+      "dow": 6,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 33,
+      "time": "20:08",
+      "dow": 6,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 34,
+      "time": "09:53",
+      "dow": 6,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 35,
+      "time": "04:24",
+      "dow": 7,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 36,
+      "time": "04:51",
+      "dow": 5,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 37,
+      "time": "12:21",
+      "dow": 5,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 38,
+      "time": "07:09",
+      "dow": 4,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 39,
+      "time": "03:02",
+      "dow": 7,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 40,
+      "time": "06:02",
+      "dow": 1,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 41,
+      "time": "14:01",
+      "dow": 5,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 42,
+      "time": "02:14",
+      "dow": 3,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 43,
+      "time": "06:55",
+      "dow": 5,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 44,
+      "time": "03:57",
+      "dow": 2,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 45,
+      "time": "08:51",
+      "dow": 3,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 46,
+      "time": "21:53",
+      "dow": 3,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 47,
+      "time": "22:30",
+      "dow": 7,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 48,
+      "time": "08:52",
+      "dow": 4,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 49,
+      "time": "23:25",
+      "dow": 1,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 50,
+      "time": "12:22",
+      "dow": 0,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 51,
+      "time": "20:19",
+      "dow": 5,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 52,
+      "time": "19:42",
+      "dow": 5,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 53,
+      "time": "20:28",
+      "dow": 1,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 54,
+      "time": "00:45",
+      "dow": 0,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 55,
+      "time": "24:55",
+      "dow": 1,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 56,
+      "time": "05:14",
+      "dow": 7,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 57,
+      "time": "04:09",
+      "dow": 7,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 58,
+      "time": "12:12",
+      "dow": 3,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 59,
+      "time": "09:03",
+      "dow": 6,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 60,
+      "time": "03:14",
+      "dow": 6,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 61,
+      "time": "00:03",
+      "dow": 7,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 62,
+      "time": "15:34",
+      "dow": 4,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 63,
+      "time": "06:14",
+      "dow": 6,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 64,
+      "time": "01:20",
+      "dow": 4,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 65,
+      "time": "17:58",
+      "dow": 6,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 66,
+      "time": "01:53",
+      "dow": 0,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 67,
+      "time": "07:32",
+      "dow": 7,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 68,
+      "time": "00:18",
+      "dow": 3,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 69,
+      "time": "01:38",
+      "dow": 2,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 70,
+      "time": "12:17",
+      "dow": 5,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 71,
+      "time": "03:40",
+      "dow": 7,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 72,
+      "time": "05:48",
+      "dow": 5,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 73,
+      "time": "23:17",
+      "dow": 6,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 74,
+      "time": "16:15",
+      "dow": 5,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 2
+    },
+    {
+      "idStationDepartures": 75,
+      "time": "01:58",
+      "dow": 6,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 76,
+      "time": "18:54",
+      "dow": 3,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 77,
+      "time": "19:53",
+      "dow": 0,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 78,
+      "time": "14:02",
+      "dow": 0,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 79,
+      "time": "16:15",
+      "dow": 3,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 80,
+      "time": "04:01",
+      "dow": 0,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 81,
+      "time": "12:11",
+      "dow": 1,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 82,
+      "time": "19:47",
+      "dow": 7,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 83,
+      "time": "03:27",
+      "dow": 2,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 84,
+      "time": "05:36",
+      "dow": 4,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 85,
+      "time": "22:09",
+      "dow": 0,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 86,
+      "time": "04:20",
+      "dow": 6,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 87,
+      "time": "05:26",
+      "dow": 1,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 88,
+      "time": "00:59",
+      "dow": 3,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 89,
+      "time": "18:51",
+      "dow": 7,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 1,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 90,
+      "time": "10:39",
+      "dow": 5,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 91,
+      "time": "04:32",
+      "dow": 5,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 92,
+      "time": "02:04",
+      "dow": 0,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 3
+    },
+    {
+      "idStationDepartures": 93,
+      "time": "00:55",
+      "dow": 5,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 94,
+      "time": "18:32",
+      "dow": 7,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 2,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 95,
+      "time": "05:47",
+      "dow": 1,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 96,
+      "time": "11:33",
+      "dow": 5,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 3,
+      "Stations_idStationArrive": 1
+    },
+    {
+      "idStationDepartures": 97,
+      "time": "20:44",
+      "dow": 3,
+      "Providers_idProvider": 2,
+      "Stations_idStationDeparture": 0,
+      "Stations_idStationArrive": 4
+    },
+    {
+      "idStationDepartures": 98,
+      "time": "06:31",
+      "dow": 1,
+      "Providers_idProvider": 1,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 0
+    },
+    {
+      "idStationDepartures": 99,
+      "time": "18:56",
+      "dow": 2,
+      "Providers_idProvider": 0,
+      "Stations_idStationDeparture": 4,
+      "Stations_idStationArrive": 1
+    }
+  ]
+}

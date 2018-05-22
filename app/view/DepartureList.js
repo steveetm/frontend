@@ -103,7 +103,7 @@ Ext.define('TouchApp.view.DepartureList', {
         '<tpl if="this.getTime(time,dow)">' +
         '<div style="color: gray;">' +
         '<tpl else>' +
-        '<div style="color: blue;>"' +
+        '<div style="color: blue;">' +
         '</tpl>' +
         'At {time} , {providerName} \'s ferry will departure from <b>{stationName}</b> to <b>{stationNameTo}</b></div>', {
             getTime: function (time,dow) {

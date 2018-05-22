@@ -1,0 +1,16 @@
+{
+  "providers": [
+    {
+      "idProvider": 0,
+      "name": "WightLink"
+    },
+    {
+      "idProvider": 1,
+      "name": "Red Funnel"
+    },
+    {
+      "idProvider": 2,
+      "name": "Hovertravel"
+    }
+  ]
+}

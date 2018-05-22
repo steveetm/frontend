@@ -1,0 +1,24 @@
+{
+  "stations": [
+    {
+      "idProvider": 0,
+      "name": "Lymington"
+    },
+    {
+      "idProvider": 1,
+      "name": "Yarmouth"
+    },
+    {
+      "idProvider": 2,
+      "name": "Fishbourne"
+    },
+    {
+      "idProvider": 3,
+      "name": "Ryde"
+    },
+    {
+      "idProvider": 4,
+      "name": "Portsmouth"
+    }
+  ]
+}
