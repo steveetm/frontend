@@ -12,8 +12,8 @@ Ext.define('TouchApp.controller.MainController', {
 
             },
             '*[itemId="stationSelect"]': {
-                initialize: 'onStationSelectInitialize',
-                change: 'onStationSelectChange'
+               // initialize: 'onStationSelectInitialize',
+                //change: 'onStationSelectChange'
             },
             '*[itemId="providerSelect"]': {
                 selectionchange: 'onProvidersSelectionChange',

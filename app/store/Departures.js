@@ -7,10 +7,10 @@ Ext.define('TouchApp.store.Departures', {
     config: {
         model: 'TouchApp.model.Departure',
         sorters: 'time',
-        grouper: {
+       /* grouper: {
             groupFn: function(record) {
                 return record.get('time').slice(0,2)+":00";
             }
-        }
+        }*/
     }
 });

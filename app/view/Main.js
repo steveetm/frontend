@@ -49,7 +49,7 @@ Ext.define('TouchApp.view.Main', {
                 type: 'vbox',
                 align: 'stretch'
             },
-            items: [{
+            items: [/*{
                 docked: 'top',
                 xtype: 'titlebar',
                 //This is not the best place for this nor the best method. The controller should have a common title generator function.
@@ -59,18 +59,22 @@ Ext.define('TouchApp.view.Main', {
                     postfix = ' after ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2)
 
                     return 'Departures today, after ' + postfix}()
-            }, {
-                docked: 'top',
-                xtype: 'selectfield',
-                fieldLabel: 'Departure',
-                itemId: 'stationSelect',
-                store: Ext.create('TouchApp.store.Stations'),
-                displayField: 'name',
-                valueField: 'idStation',
-                height: 25
-            }, {
+            },*/{
                 xtype: 'MyCarousel',
                 itemId: 'departurecarousel'
+            },{
+                docked: 'top',
+                ui: 'sajat',
+                xtype: 'button',
+                fieldLabel: 'Departure',
+                itemId: 'stationSelect',
+                //store: Ext.create('TouchApp.store.Stations'),
+                //displayField: 'name',
+                //valueField: 'idStation',
+                height: 25,
+                handler: function(button) {
+                    button.up('tabpanel').setActiveItem(1);
+                }
             }]
         }, {
             title: 'Settings',

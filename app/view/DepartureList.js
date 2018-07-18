@@ -7,6 +7,11 @@ Ext.define('TouchApp.view.DepartureList', {
     requires: ['Ext.dataview.List'],
     xtype: 'DepartureList',
     alias: 'DepartureList',
+    listeners: {
+        itemtap: function (me, index, target, record, e, eOpts) {
+            target.toggleCls('ferry-show-detailed-info');
+        }
+    },
 
     initialize: function () {
         var me = this;
@@ -98,19 +103,68 @@ Ext.define('TouchApp.view.DepartureList', {
 
     },
 
-        store: null, //Each departureList must have its own store instance
-        itemTpl: new Ext.XTemplate('' +
-        '<tpl if="this.getTime(time,dow)">' +
-        '<div style="color: gray;">' +
-        '<tpl else>' +
-        '<div style="color: blue;">' +
-        '</tpl>' +
-        'At {time} , {providerName} \'s ferry will departure from <b>{stationName}</b> to <b>{stationNameTo}</b></div>', {
-            getTime: function (time,dow) {
-                return ((TouchApp.app.getController('TouchApp.controller.MainController').currentTime > time));
+    store: null, //Each departureList must have its own store instance
+    itemTpl: new Ext.XTemplate(`
+        <tpl> 
+         {%var transportMethod = this.fakeTransportMethod()%}
+         {%var fakeArrivalTime = this.getFakeArrivalTime(values.time)%}
+         {%var providerSlug = this.getSlug(values.providerName)%}
+         
+        <div class="ferry-container provider-{[providerSlug]} transporting-passengers {[transportMethod ? 'transporting-vehicles' : '']} {[this.getTime(values.time)]}">
+            <div class="icon-container">
+                <img class="ferry-icon" src="resources/img/ferry_icon.png" />
+                <p class="provider-name">{providerName}</p>
+            </div>
+            <div class="ferry-meta-container">
+                <span class="ferry-from">{stationName}</span>
+                <span class="ferry-departure-time">{time}</span>
+            </div>
+            <div class="ferry-meta-container">
+                <span class="ferry-to">{stationNameTo}</span>
+                <span class="ferry-arrival-time">{[fakeArrivalTime]}</span>
+            </div>
+            <div class="ferry-transport-methods">
+                <img class="transport-passengers" src="resources/img/ferry_icon_transport_passengers.png" />
+                <img class="transport-vehicles" src="resources/img/ferry_icon_transport_vehicles.png" />
+            </div>
+        </div>
+        <div class="ferry-detailed-info-container">
+            <div class="detailed-info-header">Detailed information</div>
+            <div>Ferry provider: {providerName}</div>
+            <div class="departion-time">Time of departion: {time}</div>
+            <div class="arrival-time">Estimated time of arrival: {[fakeArrivalTime]}</div>
+            <div>This ferry is {[transportMethod ? 'transporting passengers, and vehicles' : 'transporting passengers only']} from {stationName} to {stationNameTo}</div>
+        </div>
+        </tpl>`, {
+        getTime: function (time) {
+            if (TouchApp.app.getController('TouchApp.controller.MainController').currentTime > time) {
+                return 'ferry-departed';
             }
-        }),
-        grouped: true,
-        disableSelection: true,
-        mode: 'SIMPLE'
+
+            return '';
+        },
+        getSlug: function (providerName) {
+            return providerName
+                .toLowerCase()
+                .replace(/ /g, '-')
+                .replace(/[^\w-]+/g, '');
+        },
+        getFakeArrivalTime: function (time) {
+            var fakeTime = time.match(/[0-9]{1,3}/g);
+            return (parseInt(fakeTime[0]) + 1) + ':' + fakeTime[1];
+        },
+        fakeTransportMethod: function () {
+            var minRand = 1;
+            var maxRand = 10;
+
+            if ((Math.ceil(Math.random() * (maxRand - minRand) + minRand) >= (maxRand / 2))) {
+                return true;
+            }
+
+            return false;
+        }
+    }),
+    grouped: true,
+    disableSelection: true,
+    mode: 'SIMPLE'
 });
