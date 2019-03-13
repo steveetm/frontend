@@ -1,0 +1,63 @@
+$active-color: #0505a9;
+$inactive-color: #808080;
+$light-gray: #9797bd;
+
+.x-titlebar {
+    background-color: $active-color;
+}
+.x-dock-body {
+    > .x-container-inner {
+        padding: 10px;
+        .x-carousel-indicator {
+            display: none;
+        }
+        .x-simplelistitem {
+            border: 0;
+            .x-listitem-body {
+                padding: 0;
+                .x-innerhtml {
+                    > div {
+                        padding: 10px;
+                        font-weight: 400;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: stretch;
+                        align-items: center;
+                        border-bottom: 1px solid $light-gray;
+                        .dep-time {
+                            flex: 0 0 30px;
+                            font-size: 1.3rem;
+                        } 
+                        .dep-datas {
+                            flex: 1 1 auto;
+                            margin-left: 15px;
+                            padding-left: 15px; 
+                            border-left: 1px solid transparent;
+                            .provider {
+                                padding: 0 0 5px;
+                            }
+                        }
+                        &.active {
+                            color: $active-color;
+                            .dep-datas {
+                                border-left-color: $active-color;
+                            }
+                        }
+                        &.inactive {
+                            color: $inactive-color;
+                            .dep-datas {
+                                border-left-color: $inactive-color;
+                            }
+                            &.hide-item {
+                                max-height: 0;
+                                padding: 0;
+                                overflow: hidden;
+                                border: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

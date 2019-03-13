@@ -1,0 +1,95 @@
+$menu-color: #0557a9;
+$active-color: #0505a9;
+$active-color-hover: rgba(5, 87, 169, 0.2);
+$inactive-color: #808080;
+
+.x-tabpanel {
+     > .x-dock.x-dock-vertical {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        &.x-sized {
+            > .x-dock-body {
+
+            }
+            > .x-tabbar {
+                flex: 0 0 auto;
+            }
+        }
+    }
+    .x-tabbar {
+        background-color: $menu-color;
+        .x-tabbar-inner {
+            padding: 0;
+            .x-tab {
+                flex-flow: row wrap;
+                flex: 1 1 25%;
+                padding: 8px 5px 2px;
+                margin: 5px;
+                justify-content: center;
+                background-color: rgba(255, 255, 255, 0);
+                transition: all 0.3s linear;
+                cursor: pointer;
+                .x-button-icon {
+                    display: block;
+                    margin: 0;
+                    flex: 0 0 auto;
+                    height: 25px;
+                    width: 25px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    &.home {
+                        background-image: url("images/boat.svg");
+                    }
+                    &.settings {
+                        background-image: url("images/settings.svg");
+                    }
+                    &.refresh {
+                        background-image: url("images/reload.svg");
+                    }
+                }
+                .x-button-label {
+                    flex: 1 1 100%;
+                    margin: 0;
+                    text-align: center;
+                    font-size: 0.8rem;
+                }
+                &.x-tab-active {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    border-radius: 5px;
+                    border: 0;
+                    color: $active-color;
+                    padding: 5px;
+                    .x-button-icon {
+                        &.home {
+                            background-image: url("images/boat-hover.svg");
+                        }
+                        &.settings {
+                            background-image: url("images/settings-hover.svg");
+                        }
+                        &.refresh {
+                            background-image: url("images/reload-hover.svg");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.x-component {
+    &.x-button {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #111;
+        border-radius: 5px;
+        padding: 10px;
+        min-width: 80px;
+        &.x-button-action {
+            background-color: #05a905;
+            border: 0;
+            color: #fff;
+        }
+    }
+}

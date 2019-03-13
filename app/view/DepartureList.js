@@ -1,3 +1,4 @@
+
 /**
  *
  * This class manages the timetables
@@ -91,6 +92,7 @@ Ext.define('TouchApp.view.DepartureList', {
 
         me.getStore().setData(filteredDepartures);
 
+
     },
     filterByAfterTime: function (time) {
         var me = this;
@@ -101,16 +103,22 @@ Ext.define('TouchApp.view.DepartureList', {
         store: null, //Each departureList must have its own store instance
         itemTpl: new Ext.XTemplate('' +
         '<tpl if="this.getTime(time,dow)">' +
-        '<div style="color: gray;">' +
+            '<div class="inactive ">' +
         '<tpl else>' +
-        '<div style="color: blue;">' +
+            '<div class="active">' +
         '</tpl>' +
-        'At {time} , {providerName} \'s ferry will departure from <b>{stationName}</b> to <b>{stationNameTo}</b></div>', {
+        //'At {time} , {providerName} \'s ferry will departure from <b>{stationName}</b> to <b>{stationNameTo}</b></div>', {
+        '<div class="dep-time">{time}</div>' +
+        '<div class="dep-datas">' + 
+            '<div class="provider">{providerName}\'s ferry</div>' +
+            '<div><b>{stationName}</b> to <b>{stationNameTo}</b></div>' +
+        '</div>' +
+        '</div>', {
             getTime: function (time,dow) {
                 return ((TouchApp.app.getController('TouchApp.controller.MainController').currentTime > time));
             }
         }),
-        grouped: true,
+
         disableSelection: true,
         mode: 'SIMPLE'
 });

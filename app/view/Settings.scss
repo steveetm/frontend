@@ -1,0 +1,23 @@
+$light-gray: #9797bd;
+$menu-color: #0557a9;
+$active-color: #0505a9;
+$active-color-hover: rgba(5, 87, 169, 0.2);
+$inactive-color: #808080;
+
+.x-dock-body {
+    > .x-container-inner {
+        .settings-tab {
+            .x-simplelistitem {
+                padding: 15px 10px;
+                border-bottom: 1px solid $light-gray;
+                background-position: right 20px center;
+                background-repeat: no-repeat;
+                background-size: 15px;
+                &.x-selected {
+                    background-image: url("images/checked.svg");
+                    background-color: $active-color-hover;
+                }
+            }
+        }
+    }
+}

@@ -56,18 +56,19 @@ Ext.define('TouchApp.view.Main', {
                 title: function() { var postfix = '';
 
                     var date = new Date()
-                    postfix = ' after ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2)
+                    postfix = '' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2)
 
                     return 'Departures today, after ' + postfix}()
             }, {
-                docked: 'top',
+                docked: 'bottom',
                 xtype: 'selectfield',
                 fieldLabel: 'Departure',
                 itemId: 'stationSelect',
                 store: Ext.create('TouchApp.store.Stations'),
                 displayField: 'name',
                 valueField: 'idStation',
-                height: 25
+                height: 25,
+                picker: 'edge'
             }, {
                 xtype: 'MyCarousel',
                 itemId: 'departurecarousel'
@@ -75,7 +76,7 @@ Ext.define('TouchApp.view.Main', {
         }, {
             title: 'Settings',
             iconCls: 'settings',
-            cls: 'cards',
+            cls: ['cards', 'settings-tab'],
             defaults: {
                 flex: 1
             },
@@ -86,7 +87,8 @@ Ext.define('TouchApp.view.Main', {
             items: [{
                 docked: 'top',
                 xtype: 'titlebar',
-                title: 'Settings'
+                title: 'Settings',
+               
             }, {
                 xtype: 'Settings'
             }]
